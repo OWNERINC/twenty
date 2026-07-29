@@ -1,0 +1,88 @@
+# Install as .github/workflows/ownerinc-build.yaml when the GitHub token has workflow scope.
+name: Ownerinc build
+
+on:
+  push:
+    branches:
+      - 'ownerinc/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+  attestations: write
+
+concurrency:
+  group: ownerinc-image-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  IMAGE_NAME: ghcr.io/ownerinc/twenty
+  OWNERINC_RELEASE: 2.24.0-ownerinc.1
+
+jobs:
+  validate:
+    name: Validate Ownerinc overlay
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Apply pt-BR overlay
+        run: node ownerinc/scripts/apply-ptbr-overrides.mjs
+
+      - name: Verify customization
+        run: node ownerinc/scripts/verify-customization.mjs
+
+  build:
+    name: Build immutable image
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f
+
+      - name: Log in to GHCR
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and publish
+        id: build
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8
+        with:
+          context: .
+          file: packages/twenty-docker/twenty/Dockerfile
+          target: twenty
+          platforms: linux/amd64
+          push: true
+          build-args: |
+            APP_VERSION=${{ env.OWNERINC_RELEASE }}
+          tags: |
+            ${{ env.IMAGE_NAME }}:${{ env.OWNERINC_RELEASE }}
+            ${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/OWNERINC/twenty
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.version=${{ env.OWNERINC_RELEASE }}
+          cache-from: type=gha,scope=ownerinc-twenty-amd64
+          cache-to: type=gha,mode=max,scope=ownerinc-twenty-amd64
+          provenance: mode=max
+
+      - name: Publish digest
+        run: |
+          {
+            echo "### Ownerinc CRM image"
+            echo
+            echo '```text'
+            echo "${IMAGE_NAME}@${{ steps.build.outputs.digest }}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

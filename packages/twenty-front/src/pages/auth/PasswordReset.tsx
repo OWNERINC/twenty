@@ -223,7 +223,7 @@ export const PasswordReset = () => {
         <StyledMainContainer>
           <AnimatedEaseIn>
             <Logo
-              secondaryLogo={workspacePublicData?.logo}
+              primaryLogo={workspacePublicData?.logo}
               placeholder={workspacePublicData?.displayName}
             />
           </AnimatedEaseIn>
