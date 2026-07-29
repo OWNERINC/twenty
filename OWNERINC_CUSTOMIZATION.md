@@ -7,7 +7,7 @@ This public fork contains the narrow customization layer used by
 
 - upstream project: `twentyhq/twenty`;
 - upstream tag: `twenty/v2.24.0`;
-- Ownerinc release: `2.24.0-ownerinc.1`;
+- Ownerinc release: `2.24.0-ownerinc.2`;
 - production architecture: the same image runs the `server` and `worker`
   services, while PostgreSQL and Redis remain private.
 
@@ -23,6 +23,8 @@ This public fork contains the narrow customization layer used by
   `Ownerinc CRM`;
 - login and password reset show one workspace logo instead of product logo
   plus a duplicated workspace badge.
+- standard workspace metadata uses `Automações` and `Criar <objeto>` instead
+  of English labels.
 
 The core layout, record components, status colors and accessibility behavior
 remain upstream. This keeps dense CRM screens predictable and minimizes merge
@@ -73,11 +75,13 @@ Do not update production directly from `twentyhq/twenty:latest`.
    `.github/workflows/ownerinc-build.yaml` only from an account or token with
    explicit workflow permission.
 7. Before promotion, create and verify a Twenty backup.
-8. Deploy the exact locally inspected image ID or registry digest to both
+8. Apply the idempotent workspace metadata migration from
+   `ownerinc/migrations/` when the release includes one.
+9. Deploy the exact locally inspected image ID or registry digest to both
    `server` and `worker`.
-9. Validate health, background jobs, login, desktop and mobile views, pt-BR,
+10. Validate health, background jobs, login, desktop and mobile views, pt-BR,
    fonts, logo and browser metadata.
-10. Record the upstream tag, fork commit, image digest, backup path and QA
+11. Record the upstream tag, fork commit, image digest, backup path and QA
     result in the Ownerinc Harness.
 
 ## Rollback
