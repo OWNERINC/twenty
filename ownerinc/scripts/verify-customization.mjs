@@ -96,6 +96,14 @@ const darkTheme = await readFile(
   'packages/twenty-ui/src/theme-constants/theme-dark.css',
   'utf8',
 );
+const standardCommandMenuItems = await readFile(
+  'packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-command-menu-item.constant.ts',
+  'utf8',
+);
+const standardNavigationMenuItems = await readFile(
+  'packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-navigation-menu-item.constant.ts',
+  'utf8',
+);
 
 if (!indexHtml.includes('<title>Ownerinc CRM</title>')) {
   throw new Error('Título público Ownerinc CRM ausente.');
@@ -110,6 +118,21 @@ if (
   !darkTheme.includes('--t-font-family: Raleway, sans-serif;')
 ) {
   throw new Error('Raleway não está ativa nos dois temas.');
+}
+
+if (
+  !standardCommandMenuItems.includes(
+    "label: 'Criar ${capitalize(objectMetadataItem.labelSingular)}'",
+  ) ||
+  !standardCommandMenuItems.includes(
+    "shortLabel: 'Criar ${capitalize(objectMetadataItem.labelSingular)}'",
+  )
+) {
+  throw new Error('A ação global de criação não está em português.');
+}
+
+if (!standardNavigationMenuItems.includes("name: 'Automações'")) {
+  throw new Error('A pasta de automações não está em português.');
 }
 
 console.log(
