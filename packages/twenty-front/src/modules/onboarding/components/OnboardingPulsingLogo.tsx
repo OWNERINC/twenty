@@ -23,5 +23,8 @@ const StyledLogo = styled.img`
 `;
 
 export const OnboardingPulsingLogo = () => (
-  <StyledLogo src="/images/integrations/twenty-logo.svg" alt="" />
+  <StyledLogo
+    src="/images/icons/android/android-launchericon-192-192.png"
+    alt="Ownerinc"
+  />
 );
