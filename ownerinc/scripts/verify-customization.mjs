@@ -192,6 +192,9 @@ if (!mainNavigationDrawer.includes('<OwnerincChatwootLauncher />')) {
 
 if (
   !ownerincDockerfile.includes(
+    'COPY ./packages/twenty-docker/twenty/Dockerfile /app/packages/twenty-docker/twenty/Dockerfile',
+  ) ||
+  !ownerincDockerfile.includes(
     'NX_PARALLEL=1 npx nx run twenty-front:lingui:extract',
   ) ||
   !ownerincDockerfile.includes(

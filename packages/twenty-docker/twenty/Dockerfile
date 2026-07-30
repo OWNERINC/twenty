@@ -66,6 +66,7 @@ RUN yarn workspaces focus --production twenty-emails twenty-shared twenty-client
 FROM front-deps AS twenty-front-build
 
 COPY ./ownerinc /app/ownerinc
+COPY ./packages/twenty-docker/twenty/Dockerfile /app/packages/twenty-docker/twenty/Dockerfile
 COPY ./packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-command-menu-item.constant.ts /app/packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/
 COPY ./packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-navigation-menu-item.constant.ts /app/packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/
 COPY ./packages/twenty-server/src/engine/metadata-modules/permissions/permissions.service.ts /app/packages/twenty-server/src/engine/metadata-modules/permissions/
