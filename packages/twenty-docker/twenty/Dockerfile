@@ -75,19 +75,19 @@ COPY ./packages/twenty-ui /app/packages/twenty-ui
 COPY ./packages/twenty-shared /app/packages/twenty-shared
 COPY ./packages/twenty-sdk /app/packages/twenty-sdk
 COPY ./packages/twenty-client-sdk /app/packages/twenty-client-sdk
-RUN npx nx run twenty-front:lingui:extract && \
+RUN NX_PARALLEL=1 npx nx run twenty-front:lingui:extract && \
     node /app/ownerinc/scripts/apply-ptbr-overrides.mjs \
       /app/packages/twenty-front/src/locales/pt-BR.po \
       /app/ownerinc/i18n/pt-BR-overrides.json && \
     node /app/ownerinc/scripts/verify-customization.mjs && \
-    npx nx run twenty-front:lingui:compile
+    NX_PARALLEL=1 npx nx run twenty-front:lingui:compile
 # To skip the memory-intensive frontend build, pre-build on the host:
 #   npx nx build twenty-front
 # The check below will use packages/twenty-front/build/ if it already exists.
 RUN if [ -d /app/packages/twenty-front/build ]; then \
       echo "Using pre-built frontend from host"; \
     else \
-      NODE_OPTIONS="--max-old-space-size=8192" npx nx build twenty-front; \
+      NX_PARALLEL=1 NODE_OPTIONS="--max-old-space-size=8192" npx nx build twenty-front; \
     fi
 
 

@@ -96,6 +96,10 @@ const darkTheme = await readFile(
   'packages/twenty-ui/src/theme-constants/theme-dark.css',
   'utf8',
 );
+const ownerincDockerfile = await readFile(
+  'packages/twenty-docker/twenty/Dockerfile',
+  'utf8',
+);
 const standardCommandMenuItems = await readFile(
   'packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-command-menu-item.constant.ts',
   'utf8',
@@ -184,6 +188,19 @@ if (!standardNavigationMenuItems.includes("name: 'Automações'")) {
 
 if (!mainNavigationDrawer.includes('<OwnerincChatwootLauncher />')) {
   throw new Error('Launcher do Chatwoot ausente da navegação principal.');
+}
+
+if (
+  !ownerincDockerfile.includes(
+    'NX_PARALLEL=1 npx nx run twenty-front:lingui:extract',
+  ) ||
+  !ownerincDockerfile.includes(
+    'NX_PARALLEL=1 NODE_OPTIONS="--max-old-space-size=8192" npx nx build twenty-front',
+  )
+) {
+  throw new Error(
+    'Build Ownerinc do front não está protegido contra corrida concorrente do Nx.',
+  );
 }
 
 for (const requiredLauncherContract of [
