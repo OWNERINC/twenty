@@ -254,7 +254,7 @@ msgstr "Uma habilidade com este nome já existe."
 #. js-lingui-id: IAfaPi
 #: src/engine/metadata-modules/metadata-side-effect/handlers/object-metadata/services/object-system-relations-on-create-side-effect-handler.service.ts
 msgid "A standard object required to provision default relations could not be found"
-msgstr ""
+msgstr "Não foi possível encontrar um objeto padrão necessário para provisionar as relações padrão"
 
 #. js-lingui-id: mkFXEH
 #: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
@@ -867,7 +867,7 @@ msgstr "Agosto"
 #. js-lingui-id: X7GoTa
 #: src/engine/core-modules/auth/token/services/sso-exchange-token.service.ts
 msgid "Authentication failed, please sign in again."
-msgstr ""
+msgstr "Falha na autenticação. Entre novamente."
 
 #. js-lingui-id: LB4qX/
 #: src/engine/core-modules/auth/utils/auth-graphql-api-exception-handler.util.ts
@@ -1084,24 +1084,24 @@ msgstr "Canal de calendário não encontrado."
 #. js-lingui-id: 9uvvYS
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar end field metadata not found"
-msgstr ""
+msgstr "Metadados do campo de término do calendário não encontrados"
 
 #. js-lingui-id: 6BRvIC
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar end field must be a date or date time field"
-msgstr ""
+msgstr "O campo de término do calendário deve ser do tipo data ou data e hora"
 
 #. js-lingui-id: PEXN0U
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar end field must belong to the view object"
-msgstr ""
+msgstr "O campo de término do calendário deve pertencer ao objeto da visualização"
 
 #. js-lingui-id: k6cK5J
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar end field not found"
-msgstr ""
+msgstr "Campo de término do calendário não encontrado"
 
 #. js-lingui-id: bRk+FR
 #: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
@@ -1162,24 +1162,24 @@ msgstr "Eventos de Calendário"
 #. js-lingui-id: Sn4xhy
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar field metadata not found"
-msgstr ""
+msgstr "Metadados do campo de calendário não encontrados"
 
 #. js-lingui-id: J3xD/M
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar field must be a date or date time field"
-msgstr ""
+msgstr "O campo de calendário deve ser do tipo data ou data e hora"
 
 #. js-lingui-id: hUOMKq
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar field must belong to the view object"
-msgstr ""
+msgstr "O campo de calendário deve pertencer ao objeto da visualização"
 
 #. js-lingui-id: 26b8pD
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar field not found"
-msgstr ""
+msgstr "Campo de calendário não encontrado"
 
 #. js-lingui-id: GtrALl
 #: src/modules/calendar/calendar-event-import-manager/exceptions/calendar-event-import.exception.ts
@@ -1190,13 +1190,13 @@ msgstr "O provedor de calendário não é compatível."
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar start and end fields must be different"
-msgstr ""
+msgstr "Os campos de início e término do calendário devem ser diferentes"
 
 #. js-lingui-id: DRukEV
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar start and end fields must have the same type"
-msgstr ""
+msgstr "Os campos de início e término do calendário devem ter o mesmo tipo"
 
 #. js-lingui-id: CnNFfU
 #: src/modules/calendar/calendar-event-import-manager/drivers/exceptions/calendar-event-import-driver.exception.ts
@@ -1207,19 +1207,19 @@ msgstr "Erro de sincronização do calendário."
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar view must have a calendar field"
-msgstr ""
+msgstr "A visualização de calendário deve ter um campo de calendário"
 
 #. js-lingui-id: JhktJw
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar view must have a calendar layout"
-msgstr ""
+msgstr "A visualização de calendário deve usar um layout de calendário"
 
 #. js-lingui-id: D9pZ2l
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-validator.service.ts
 msgid "Calendar widget views only support the month layout"
-msgstr ""
+msgstr "Visualizações de widget de calendário aceitam apenas o layout mensal"
 
 #. js-lingui-id: 9e+AU2
 #: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
@@ -1525,7 +1525,7 @@ msgstr "Dependência circular detectada na hierarquia do grupo de filtros da vis
 #. js-lingui-id: fDGNL3
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "Claiming is not configured on this server. Ask an administrator to configure the GitHub OAuth app."
-msgstr ""
+msgstr "A reivindicação não está configurada neste servidor. Peça a um administrador para configurar o aplicativo OAuth do GitHub."
 
 #. js-lingui-id: J7dFKa
 #: src/engine/core-modules/application/connection-provider/connection-provider.exception.ts
@@ -1804,12 +1804,12 @@ msgstr "Permissões de campo contraditórias foram detectadas em um campo de rel
 #. js-lingui-id: 1M+KVf
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-standard-flat-field-metadata.util.ts
 msgid "Core workflow id"
-msgstr ""
+msgstr "ID interno da automação"
 
 #. js-lingui-id: 63q4o1
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util.ts
 msgid "Core workflow version id"
-msgstr ""
+msgstr "ID interno da versão da automação"
 
 #. js-lingui-id: xuYXJX
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-sort-validator.service.ts
@@ -1867,13 +1867,13 @@ msgstr "Não foi possível resolver os metadados do objeto pai \"{0}\" para o ef
 #. js-lingui-id: 5I3Pop
 #: src/engine/metadata-modules/metadata-side-effect/handlers/object-metadata/services/object-system-relations-on-create-side-effect-handler.service.ts
 msgid "Could not resolve standard relation object \"{standardObjectNameSingular}\" to provision default relations"
-msgstr ""
+msgstr "Não foi possível localizar o objeto de relação padrão \"{standardObjectNameSingular}\" para provisionar as relações padrão"
 
 #. js-lingui-id: NJXy7w
 #. placeholder {0}: updatedFlatObjectMetadata.nameSingular
 #: src/engine/metadata-modules/metadata-side-effect/handlers/object-metadata/services/object-system-relations-on-update-side-effect-handler.service.ts
 msgid "Could not resolve the existing object \"{0}\" to rename its default relations"
-msgstr ""
+msgstr "Não foi possível localizar o objeto existente \"{0}\" para renomear suas relações padrão"
 
 #. js-lingui-id: hYgDIe
 #: src/engine/core-modules/tool-provider/utils/get-crud-tool-label.util.ts
@@ -3255,7 +3255,7 @@ msgstr "Índices GIN funcionam em colunas multi-seleção, array, JSON e vetor d
 #. js-lingui-id: odCOaU
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "GitHub authentication failed. Try connecting your GitHub account again."
-msgstr ""
+msgstr "Falha na autenticação do GitHub. Tente conectar sua conta do GitHub novamente."
 
 #. js-lingui-id: cvJ2e6
 #: src/engine/core-modules/auth/auth.exception.ts
@@ -3492,7 +3492,7 @@ msgstr "Permissões insuficientes."
 #. js-lingui-id: 4bX5tI
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 msgid "Internal name of the campaign"
-msgstr ""
+msgstr "Nome interno da campanha"
 
 #. js-lingui-id: pSjWxS
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-runner/exceptions/workspace-migration-action-execution.exception.ts
@@ -4923,12 +4923,12 @@ msgstr "Tópicos de Mensagem"
 #. js-lingui-id: SW66cn
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
 msgid "MessageCampaign"
-msgstr ""
+msgstr "Campanha de mensagens"
 
 #. js-lingui-id: DJS/Oe
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
 msgid "MessageList"
-msgstr ""
+msgstr "Lista de mensagens"
 
 #. js-lingui-id: t7TeQU
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
@@ -5206,7 +5206,7 @@ msgstr "Nenhuma permissão encontrada na fonte de dados."
 #. js-lingui-id: 9iQhTU
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "No provenance attestation was found for the published package. Publish it with npm trusted publishing from GitHub Actions, then try again."
-msgstr ""
+msgstr "Nenhum atestado de procedência foi encontrado para o pacote publicado. Publique-o pelo GitHub Actions usando a publicação confiável do npm e tente novamente."
 
 #. js-lingui-id: NcwTz7
 #: src/engine/api/graphql/workspace-query-runner/workspace-query-runner.exception.ts
@@ -5256,7 +5256,7 @@ msgstr "Nenhum contexto de autenticação válido encontrado."
 #. js-lingui-id: r+kse7
 #: src/engine/core-modules/emailing-domain/exceptions/emailing-domain.exception.ts
 msgid "No verified sending domain matches this from address."
-msgstr ""
+msgstr "Nenhum domínio de envio verificado corresponde a este endereço de remetente."
 
 #. js-lingui-id: AzXrd9
 #: src/engine/core-modules/auth/services/reset-password.service.ts
@@ -5602,7 +5602,7 @@ msgstr "Somente administradores podem se passar por usuários com privilégios d
 #. js-lingui-id: JzXn58
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "Only applications published to npm can be claimed this way."
-msgstr ""
+msgstr "Somente aplicativos publicados no npm podem ser reivindicados dessa forma."
 
 #. js-lingui-id: XLn1DI
 #: src/engine/workspace-manager/workspace-migration/interceptors/utils/__tests__/build-metadata-validation-error-payload.util.spec.ts
@@ -6422,12 +6422,12 @@ msgstr "ID do evento recorrente"
 #. js-lingui-id: V3DAOp
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-standard-flat-field-metadata.util.ts
 msgid "Reference to the core workflow row"
-msgstr ""
+msgstr "Referência ao registro interno da automação"
 
 #. js-lingui-id: ODfTA/
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util.ts
 msgid "Reference to the core workflowVersion row"
-msgstr ""
+msgstr "Referência ao registro interno da versão da automação"
 
 #. js-lingui-id: 1GvzpH
 #: src/engine/metadata-modules/connected-account/exceptions/connected-account-refresh-tokens.exception.ts
@@ -6711,7 +6711,7 @@ msgstr "Falta identificador no alvo da função."
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/utils/validate-flat-role-target-targets-only-one-entity.util.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/utils/validate-flat-role-target-targets-only-one-entity.util.ts
 msgid "Role target must have exactly one of: apiKeyId, userWorkspaceId, or agentUniversalIdentifier"
-msgstr ""
+msgstr "O destino da função deve ter exatamente um destes identificadores: apiKeyId, userWorkspaceId ou agentUniversalIdentifier"
 
 #. js-lingui-id: oNYUjk
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-role-target-validator.service.ts
@@ -6991,7 +6991,7 @@ msgstr "Acesso de administrador do servidor alterado"
 #. js-lingui-id: uK5uBy
 #: src/engine/core-modules/application/application-key-value/services/application-key-value.service.ts
 msgid "Server keys require the application publisher workspace to have the application installed."
-msgstr ""
+msgstr "As chaves do servidor exigem que o aplicativo esteja instalado no espaço de trabalho do publicador."
 
 #. js-lingui-id: Q8FQ55
 #: src/engine/core-modules/server-route-trigger/exceptions/server-route-trigger.exception.ts
@@ -7524,7 +7524,7 @@ msgstr "O aplicativo não tem um papel válido atribuído. Verifique a configura
 #. js-lingui-id: QyGlqv
 #: src/engine/core-modules/application/application.exception.ts
 msgid "The application key-value entry could not be saved. Please try again."
-msgstr ""
+msgstr "Não foi possível salvar a entrada de chave e valor do aplicativo. Tente novamente."
 
 #. js-lingui-id: KHtcGn
 #: src/modules/calendar/calendar-event-creation-manager/exceptions/calendar-event-creation.exception.ts
@@ -7685,7 +7685,7 @@ msgstr "A lista para a qual esta campanha foi enviada"
 #. js-lingui-id: zIwdvk
 #: src/engine/core-modules/application/connection-provider/connection-provider.exception.ts
 msgid "The logic function to run on connect was not found."
-msgstr ""
+msgstr "A função lógica a ser executada na conexão não foi encontrada."
 
 #. js-lingui-id: kdTB4e
 #: src/engine/core-modules/application/connection-provider/connection-provider.exception.ts
@@ -7700,7 +7700,7 @@ msgstr "O parâmetro state do OAuth é inválido ou expirou."
 #. js-lingui-id: w/9iNJ
 #: src/engine/metadata-modules/metadata-side-effect/handlers/object-metadata/services/object-system-relations-on-update-side-effect-handler.service.ts
 msgid "The object to rename could not be found to update its default relations"
-msgstr ""
+msgstr "O objeto a ser renomeado não foi encontrado para atualizar suas relações padrão"
 
 #. js-lingui-id: hx2IZ4
 #: src/engine/metadata-modules/object-permission/field-permission/field-permission.service.ts
@@ -7716,7 +7716,7 @@ msgstr "O nome da oportunidade"
 #. js-lingui-id: D/w+3o
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "The package registry could not be reached to verify the package provenance. Try again later."
-msgstr ""
+msgstr "Não foi possível acessar o registro de pacotes para verificar a procedência. Tente novamente mais tarde."
 
 #. js-lingui-id: NQP08Q
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
@@ -7905,12 +7905,12 @@ msgstr "Este valor de {fieldLabel} já está em uso. Verifique seus dados e tent
 #. js-lingui-id: bypqPt
 #: src/engine/core-modules/server-route-trigger/exceptions/server-route-trigger.exception.ts
 msgid "This action is currently unavailable."
-msgstr ""
+msgstr "Esta ação não está disponível no momento."
 
 #. js-lingui-id: 4CW4iW
 #: src/engine/core-modules/emailing-domain/exceptions/emailing-domain.exception.ts
 msgid "This address cannot be removed from the suppression list."
-msgstr ""
+msgstr "Este endereço não pode ser removido da lista de supressão."
 
 #. js-lingui-id: Izdz+Y
 #: src/engine/core-modules/api-key/services/api-key.service.ts
@@ -7951,17 +7951,17 @@ msgstr "Este aplicativo requer uma versão mais recente do que aquela para a qua
 #. js-lingui-id: ecIX3O
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "This application is already owned by a workspace."
-msgstr ""
+msgstr "Este aplicativo já pertence a um espaço de trabalho."
 
 #. js-lingui-id: SRnMG0
 #: src/engine/core-modules/emailing-domain/exceptions/emailing-domain.exception.ts
 msgid "This campaign cannot be sent. It may be missing a sender, subject or recipient list, or it was already sent."
-msgstr ""
+msgstr "Esta campanha não pode ser enviada. Pode estar sem remetente, assunto ou lista de destinatários, ou já ter sido enviada."
 
 #. js-lingui-id: ZyEq3L
 #: src/engine/core-modules/emailing-domain/exceptions/emailing-domain.exception.ts
 msgid "This campaign no longer exists."
-msgstr ""
+msgstr "Esta campanha não existe mais."
 
 #. js-lingui-id: 99gsJ/
 #: src/engine/metadata-modules/index-metadata/utils/validate-no-duplicate-unique-index.util.ts
@@ -8042,7 +8042,7 @@ msgstr "Este campo não pode ser modificado."
 #. js-lingui-id: dxfM0y
 #: src/modules/workflow/common/workspace-services/workflow-version-validation.workspace-service.ts
 msgid "This field cannot be updated directly on a workflow version"
-msgstr ""
+msgstr "Este campo não pode ser atualizado diretamente em uma versão da automação"
 
 #. js-lingui-id: AKIPVa
 #: src/engine/metadata-modules/field-metadata/field-metadata.exception.ts
@@ -8227,7 +8227,7 @@ msgstr "Esta função não pode ser modificada."
 #. js-lingui-id: DEJJoY
 #: src/engine/core-modules/application/application-key-value/services/application-key-value.service.ts
 msgid "This server key is already claimed by another workspace."
-msgstr ""
+msgstr "Esta chave do servidor já foi reivindicada por outro espaço de trabalho."
 
 #. js-lingui-id: nFIPim
 #: src/engine/core-modules/workspace/workspace.exception.ts
@@ -8237,7 +8237,7 @@ msgstr "Este subdomínio já está em uso."
 #. js-lingui-id: dZF5Gw
 #: src/engine/core-modules/emailing-domain/exceptions/emailing-domain.exception.ts
 msgid "This suppressed address no longer exists."
-msgstr ""
+msgstr "Este endereço suprimido não existe mais."
 
 #. js-lingui-id: aXBMTb
 #: src/engine/api/common/common-query-runners/common-merge-many-query-runner.service.ts
@@ -8497,7 +8497,7 @@ msgstr "O identificador universal é reservado para metadados gerenciados pelo s
 #: src/modules/dashboard/chart-data/utils/build-unique-relation-labels.util.ts
 #: src/modules/dashboard/chart-data/utils/format-dimension-value.util.ts
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #. js-lingui-id: tEncxN
 #: src/engine/metadata-modules/permissions/permissions.exception.ts
@@ -9237,7 +9237,7 @@ msgstr "O tipo de widget VIEW ainda não é suportado."
 #. js-lingui-id: s8y6wj
 #: src/engine/metadata-modules/view/services/view-widget-upsert.service.ts
 msgid "Widget views must use a widget view type"
-msgstr ""
+msgstr "Visualizações de widget devem usar um tipo de visualização de widget"
 
 #. js-lingui-id: qRILxq
 #: src/engine/metadata-modules/view-field-group/constants/standard-view-field-group-names.ts
@@ -9435,7 +9435,7 @@ msgstr "Fluxo de trabalho do gatilho automatizado do fluxo de trabalho"
 #. js-lingui-id: 2NVkfi
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
 msgid "WorkflowRun"
-msgstr ""
+msgstr "Execução de automação"
 
 #. js-lingui-id: woYYQq
 #: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
@@ -9445,7 +9445,7 @@ msgstr "Fluxos de trabalho"
 #. js-lingui-id: urCUgs
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
 msgid "WorkflowVersion"
-msgstr ""
+msgstr "Versão da automação"
 
 #. js-lingui-id: b4kire
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util.ts
@@ -9504,7 +9504,7 @@ msgstr "O espaço de trabalho não está pronto para receber novos membros"
 #. js-lingui-id: 8RwcFg
 #: src/engine/core-modules/logic-function/logic-function-trigger/triggers/route/exceptions/route-trigger.exception.ts
 msgid "Workspace is suspended."
-msgstr ""
+msgstr "O espaço de trabalho está suspenso."
 
 #. js-lingui-id: iN7doz
 #: src/engine/core-modules/auth/services/sign-in-up.service.ts
@@ -9877,7 +9877,7 @@ msgstr "Sua assinatura de faturamento está corrompida. Por favor, entre em cont
 #. js-lingui-id: K48BuZ
 #: src/engine/core-modules/application/application-registration/application-registration.exception.ts
 msgid "Your GitHub account does not own the organization that publishes this package. If you are an owner, make sure you granted this app access to the organization on GitHub's authorization screen (Organization access section)."
-msgstr ""
+msgstr "Sua conta do GitHub não é proprietária da organização que publica este pacote. Se você for proprietário, confirme que concedeu acesso à organização na seção de acesso da organização da tela de autorização do GitHub."
 
 #. js-lingui-id: bTyBrW
 #: src/engine/core-modules/auth/services/auth.service.ts

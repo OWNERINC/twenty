@@ -82,8 +82,27 @@ if (missing.length > 0) {
   );
 }
 
+const untranslated = updatedBlocks
+  .map((block) => ({
+    messageId: decodePoField(block, 'msgid'),
+    messageString: decodePoField(block, 'msgstr'),
+  }))
+  .filter(
+    ({ messageId, messageString }) =>
+      messageId !== null && messageId !== '' && messageString === '',
+  )
+  .map(({ messageId }) => messageId);
+
+if (untranslated.length > 0) {
+  throw new Error(
+    `Catálogo pt-BR ainda possui traduções vazias:\n${untranslated
+      .map((messageId) => `- ${messageId}`)
+      .join('\n')}`,
+  );
+}
+
 await writeFile(poPath, `${updatedBlocks.join('\n\n').trimEnd()}\n`);
 
 console.log(
-  `Ownerinc pt-BR: ${seen.size} traduções aplicadas em ${poPath}.`,
+  `Ownerinc pt-BR: ${seen.size} traduções aplicadas em ${poPath}; zero vazias.`,
 );

@@ -13,10 +13,12 @@ This public fork contains the narrow customization layer used by
 
 ## What is customized
 
-- complete Brazilian Portuguese catalog, with an Ownerinc overlay applied
-  after every Lingui extraction;
+- complete Brazilian Portuguese frontend and server catalogs, with Ownerinc
+  overlays applied after every Lingui extraction;
 - `125` reviewed Ownerinc translations on this release, including `50` new
   messages introduced after `v2.24.0`;
+- `49` server translations added for authentication, campaigns, metadata and
+  validation messages introduced upstream;
 - zero empty `msgstr` entries is a blocking build gate;
 - Raleway is self-hosted and used in the light and dark themes;
 - official Ownerinc favicon replaces the default product mark in browser,

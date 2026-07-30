@@ -43,8 +43,12 @@ COPY ./packages/twenty-emails /app/packages/twenty-emails
 COPY ./packages/twenty-shared /app/packages/twenty-shared
 COPY ./packages/twenty-client-sdk /app/packages/twenty-client-sdk
 COPY ./packages/twenty-server /app/packages/twenty-server
+COPY ./ownerinc /app/ownerinc
 
 RUN npx nx run twenty-server:lingui:extract && \
+    node /app/ownerinc/scripts/apply-ptbr-overrides.mjs \
+      /app/packages/twenty-server/src/engine/core-modules/i18n/locales/pt-BR.po \
+      /app/ownerinc/i18n/pt-BR-server-overrides.json && \
     npx nx run twenty-server:lingui:compile && \
     npx nx run twenty-emails:lingui:extract && \
     npx nx run twenty-emails:lingui:compile

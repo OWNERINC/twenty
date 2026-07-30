@@ -31,7 +31,11 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
 
       - name: Apply pt-BR overlay
-        run: node ownerinc/scripts/apply-ptbr-overrides.mjs
+        run: |
+          node ownerinc/scripts/apply-ptbr-overrides.mjs
+          node ownerinc/scripts/apply-ptbr-overrides.mjs \
+            packages/twenty-server/src/engine/core-modules/i18n/locales/pt-BR.po \
+            ownerinc/i18n/pt-BR-server-overrides.json
 
       - name: Verify customization
         run: node ownerinc/scripts/verify-customization.mjs
