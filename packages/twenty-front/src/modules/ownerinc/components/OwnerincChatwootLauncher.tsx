@@ -8,7 +8,7 @@ import { styled } from '@linaria/react';
 import { IconExternalLink } from 'twenty-ui/icon';
 import { themeCssVariables } from 'twenty-ui/theme-constants';
 
-export const CHATWOOT_BRAND_BLUE = '#1F93FF';
+export const CHATWOOT_BRAND_BLUE = '#47A7F6';
 
 const StyledExternalLinkIcon = styled(IconExternalLink)`
   color: ${CHATWOOT_BRAND_BLUE};

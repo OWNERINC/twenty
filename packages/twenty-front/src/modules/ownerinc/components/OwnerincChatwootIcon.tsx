@@ -1,6 +1,6 @@
 import { type IconComponent } from 'twenty-ui/icon';
 
-// Favicon-style treatment using Chatwoot's official bubble mark and brand blue.
+// Exact geometry and color sampled from Chatwoot's served 96 px favicon.
 export const OwnerincChatwootIcon: IconComponent = ({
   className,
   size = 20,
@@ -13,15 +13,19 @@ export const OwnerincChatwootIcon: IconComponent = ({
     fill="none"
     height={size}
     style={style}
-    viewBox="0 0 66 66"
+    viewBox="0 0 16 16"
     width={size}
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="33" cy="33" fill="#1F93FF" r="30" />
     <path
-      d="M63 63H32.9976C16.4591 63 2.99996 49.5399 2.99996 32.9973C2.99996 16.4601 16.4591 3 32.9979 3C49.5408 3 63 16.4601 63 32.9973V63Z"
+      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z"
+      fill="#47A7F6"
+    />
+    <path
+      d="M11.4172 11.4172H7.70831C5.66383 11.4172 4 9.75328 4 7.70828C4 5.66394 5.66383 4 7.70835 4C9.75339 4 11.4172 5.66394 11.4172 7.70828V11.4172Z"
       fill="white"
-      transform="translate(12.5 12.5) scale(0.6212)"
+      stroke="white"
+      strokeWidth="0.1875"
     />
   </svg>
 );

@@ -214,7 +214,7 @@ for (const requiredLauncherContract of [
   'className="ownerinc-chatwoot-launcher"',
   'rightOptions=',
   'CHATWOOT_BRAND_BLUE',
-  "'#1F93FF'",
+  "'#47A7F6'",
   'OwnerincChatwootIcon',
 ]) {
   if (
@@ -228,10 +228,11 @@ for (const requiredLauncherContract of [
 }
 
 for (const requiredIconContract of [
-  '<circle',
-  'fill="#1F93FF"',
+  'viewBox="0 0 16 16"',
+  'fill="#47A7F6"',
   'fill="white"',
-  'scale(0.6212)',
+  'strokeWidth="0.1875"',
+  'M11.4172 11.4172H7.70831',
 ]) {
   if (!chatwootIcon.includes(requiredIconContract)) {
     throw new Error(
