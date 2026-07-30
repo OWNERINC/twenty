@@ -6,8 +6,8 @@ This public fork contains the narrow customization layer used by
 ## Release baseline
 
 - upstream project: `twentyhq/twenty`;
-- upstream tag: `twenty/v2.24.0`;
-- Ownerinc release: `2.24.0-ownerinc.2`;
+- upstream tag: `twenty/v2.25.1`;
+- Ownerinc release: `2.25.1-ownerinc.1`;
 - production architecture: the same image runs the `server` and `worker`
   services, while PostgreSQL and Redis remain private.
 
@@ -15,6 +15,8 @@ This public fork contains the narrow customization layer used by
 
 - complete Brazilian Portuguese catalog, with an Ownerinc overlay applied
   after every Lingui extraction;
+- `125` reviewed Ownerinc translations on this release, including `50` new
+  messages introduced after `v2.24.0`;
 - zero empty `msgstr` entries is a blocking build gate;
 - Raleway is self-hosted and used in the light and dark themes;
 - official Ownerinc favicon replaces the default product mark in browser,
@@ -25,6 +27,7 @@ This public fork contains the narrow customization layer used by
   plus a duplicated workspace badge.
 - standard workspace metadata uses `Automações` and `Criar <objeto>` instead
   of English labels.
+- persisted e-mail and campaign commands use Brazilian Portuguese labels.
 
 The core layout, record components, status colors and accessibility behavior
 remain upstream. This keeps dense CRM screens predictable and minimizes merge

@@ -131,6 +131,25 @@ if (
   throw new Error('A ação global de criação não está em português.');
 }
 
+for (const commandLabel of [
+  "label: 'Redigir e-mail'",
+  "shortLabel: 'Redigir'",
+  "label: 'Redigir campanha'",
+  "shortLabel: 'Campanha'",
+  "label: 'Criar campanha'",
+  "shortLabel: 'Criar campanha'",
+  "label: 'Enviar campanha'",
+  "shortLabel: 'Enviar'",
+  "label: 'Enviar e-mail de teste'",
+  "shortLabel: 'Testar'",
+]) {
+  if (!standardCommandMenuItems.includes(commandLabel)) {
+    throw new Error(
+      `Rótulo persistido de campanha ausente: ${commandLabel}`,
+    );
+  }
+}
+
 if (!standardNavigationMenuItems.includes("name: 'Automações'")) {
   throw new Error('A pasta de automações não está em português.');
 }
