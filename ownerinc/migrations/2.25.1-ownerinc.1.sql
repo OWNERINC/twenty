@@ -60,4 +60,16 @@ WHERE
     OR item."shortLabel" IS DISTINCT FROM translated."shortLabel"
   );
 
+-- Request handling and transactional e-mails resolve the locale from
+-- userWorkspace before falling back to user. Keep both records aligned.
+UPDATE core."userWorkspace" AS user_workspace
+SET
+  locale = 'pt-BR',
+  "updatedAt" = NOW()
+FROM core."user" AS app_user
+WHERE
+  user_workspace."userId" = app_user.id
+  AND app_user.locale = 'pt-BR'
+  AND user_workspace.locale IS DISTINCT FROM 'pt-BR';
+
 COMMIT;
