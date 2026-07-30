@@ -39,6 +39,11 @@ type CachedRolesFromPermissionConfig = {
   flatRolePermissionFlagMaps: FlatRolePermissionFlagMaps;
 } | null;
 
+const OWNERINC_DISABLED_PERMISSION_FLAGS = new Set<PermissionFlagType>([
+  PermissionFlagType.AI,
+  PermissionFlagType.AI_SETTINGS,
+]);
+
 @Injectable()
 export class PermissionsService {
   constructor(
@@ -90,8 +95,9 @@ export class PermissionsService {
         return {
           ...acc,
           [feature]:
-            hasBasePermission ||
-            this.roleHasPermissionFlag(roleOfUserWorkspace, feature),
+            !OWNERINC_DISABLED_PERMISSION_FLAGS.has(feature) &&
+            (hasBasePermission ||
+              this.roleHasPermissionFlag(roleOfUserWorkspace, feature)),
         };
       },
       defaultSettingsPermissions,

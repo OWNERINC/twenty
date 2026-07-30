@@ -68,6 +68,7 @@ FROM front-deps AS twenty-front-build
 COPY ./ownerinc /app/ownerinc
 COPY ./packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-command-menu-item.constant.ts /app/packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/
 COPY ./packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-navigation-menu-item.constant.ts /app/packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/
+COPY ./packages/twenty-server/src/engine/metadata-modules/permissions/permissions.service.ts /app/packages/twenty-server/src/engine/metadata-modules/permissions/
 COPY ./packages/twenty-front /app/packages/twenty-front
 COPY ./packages/twenty-front-component-renderer /app/packages/twenty-front-component-renderer
 COPY ./packages/twenty-ui /app/packages/twenty-ui

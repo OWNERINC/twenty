@@ -6,6 +6,11 @@ import {
 import { currentWorkspaceState } from '@/auth/states/currentWorkspaceState';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
 
+const OWNERINC_DISABLED_PERMISSION_FLAGS = new Set<PermissionFlagType>([
+  PermissionFlagType.AI,
+  PermissionFlagType.AI_SETTINGS,
+]);
+
 export const useHasPermissionFlag = (
   permissionFlagKey?: PermissionFlagType,
 ) => {
@@ -14,6 +19,10 @@ export const useHasPermissionFlag = (
 
   if (!permissionFlagKey) {
     return true;
+  }
+
+  if (OWNERINC_DISABLED_PERMISSION_FLAGS.has(permissionFlagKey)) {
+    return false;
   }
 
   if (

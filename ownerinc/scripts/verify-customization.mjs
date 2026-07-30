@@ -104,6 +104,30 @@ const standardNavigationMenuItems = await readFile(
   'packages/twenty-server/src/engine/workspace-manager/twenty-standard-application/constants/standard-navigation-menu-item.constant.ts',
   'utf8',
 );
+const mainNavigationDrawer = await readFile(
+  'packages/twenty-front/src/modules/navigation/components/MainNavigationDrawer.tsx',
+  'utf8',
+);
+const mobileNavigationBar = await readFile(
+  'packages/twenty-front/src/modules/navigation/components/MobileNavigationBar.tsx',
+  'utf8',
+);
+const chatwootLauncher = await readFile(
+  'packages/twenty-front/src/modules/ownerinc/components/OwnerincChatwootLauncher.tsx',
+  'utf8',
+);
+const chatwootConstants = await readFile(
+  'packages/twenty-front/src/modules/ownerinc/constants/ownerincChatwoot.constants.ts',
+  'utf8',
+);
+const frontPermissionHook = await readFile(
+  'packages/twenty-front/src/modules/settings/roles/hooks/useHasPermissionFlag.ts',
+  'utf8',
+);
+const serverPermissions = await readFile(
+  'packages/twenty-server/src/engine/metadata-modules/permissions/permissions.service.ts',
+  'utf8',
+);
 
 if (!indexHtml.includes('<title>Ownerinc CRM</title>')) {
   throw new Error('Título público Ownerinc CRM ausente.');
@@ -154,6 +178,49 @@ if (!standardNavigationMenuItems.includes("name: 'Automações'")) {
   throw new Error('A pasta de automações não está em português.');
 }
 
+if (!mainNavigationDrawer.includes('<OwnerincChatwootLauncher />')) {
+  throw new Error('Launcher do Chatwoot ausente da navegação principal.');
+}
+
+for (const requiredLauncherContract of [
+  'https://chatwoot.ownerinc.com.br',
+  'Abrir Chatwoot',
+  'target="_blank"',
+  'rel="noopener noreferrer"',
+  'aria-label="Abrir Chatwoot em nova aba"',
+  'themeCssVariables.spacing[11]',
+  'OwnerincChatwootIcon',
+]) {
+  if (
+    !chatwootLauncher.includes(requiredLauncherContract) &&
+    !chatwootConstants.includes(requiredLauncherContract)
+  ) {
+    throw new Error(
+      `Contrato do launcher Chatwoot ausente: ${requiredLauncherContract}`,
+    );
+  }
+}
+
+if (
+  !mobileNavigationBar.includes("name: 'chatwoot'") ||
+  !mobileNavigationBar.includes('openOwnerincChatwoot()') ||
+  mobileNavigationBar.includes('newAiChat')
+) {
+  throw new Error('Navegação móvel não substituiu a IA pelo Chatwoot.');
+}
+
+for (const permissionSource of [frontPermissionHook, serverPermissions]) {
+  if (
+    !permissionSource.includes('OWNERINC_DISABLED_PERMISSION_FLAGS') ||
+    !permissionSource.includes('PermissionFlagType.AI') ||
+    !permissionSource.includes('PermissionFlagType.AI_SETTINGS')
+  ) {
+    throw new Error(
+      'Bloqueio Ownerinc das permissões nativas de IA está incompleto.',
+    );
+  }
+}
+
 console.log(
-  `Ownerinc customization: PASS (${entries.size} mensagens pt-BR, zero vazias).`,
+  `Ownerinc customization: PASS (${entries.size} mensagens pt-BR, zero vazias, Chatwoot resiliente e IA nativa desativada).`,
 );

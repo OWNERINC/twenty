@@ -2,6 +2,7 @@ import { currentWorkspaceState } from '@/auth/states/currentWorkspaceState';
 import { MainNavigationDrawerNavigationContent } from '@/navigation/components/MainNavigationDrawerNavigationContent';
 import { MainNavigationDrawerTabsRow } from '@/navigation/components/MainNavigationDrawerTabsRow';
 import { NavigationDrawerTabbedContent } from '@/navigation/components/NavigationDrawerTabbedContent';
+import { OwnerincChatwootLauncher } from '@/ownerinc/components/OwnerincChatwootLauncher';
 import { useHasPermissionFlag } from '@/settings/roles/hooks/useHasPermissionFlag';
 import { NavigationDrawer } from '@/ui/navigation/navigation-drawer/components/NavigationDrawer';
 import { NavigationDrawerFixedContent } from '@/ui/navigation/navigation-drawer/components/NavigationDrawerFixedContent';
@@ -28,6 +29,7 @@ export const MainNavigationDrawer = ({ className }: { className?: string }) => {
       title={currentWorkspace?.displayName ?? ''}
     >
       <NavigationDrawerFixedContent>
+        <OwnerincChatwootLauncher />
         <MainNavigationDrawerTabsRow />
       </NavigationDrawerFixedContent>
 
