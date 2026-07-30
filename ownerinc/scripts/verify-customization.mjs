@@ -120,6 +120,10 @@ const chatwootConstants = await readFile(
   'packages/twenty-front/src/modules/ownerinc/constants/ownerincChatwoot.constants.ts',
   'utf8',
 );
+const chatwootIcon = await readFile(
+  'packages/twenty-front/src/modules/ownerinc/components/OwnerincChatwootIcon.tsx',
+  'utf8',
+);
 const frontPermissionHook = await readFile(
   'packages/twenty-front/src/modules/settings/roles/hooks/useHasPermissionFlag.ts',
   'utf8',
@@ -184,11 +188,13 @@ if (!mainNavigationDrawer.includes('<OwnerincChatwootLauncher />')) {
 
 for (const requiredLauncherContract of [
   'https://chatwoot.ownerinc.com.br',
-  'Abrir Chatwoot',
-  'target="_blank"',
-  'rel="noopener noreferrer"',
-  'aria-label="Abrir Chatwoot em nova aba"',
-  'themeCssVariables.spacing[11]',
+  "OWNERINC_CHATWOOT_LABEL = 'Chatwoot'",
+  '<NavigationDrawerItem',
+  'alwaysShowRightOptions',
+  'className="ownerinc-chatwoot-launcher"',
+  'rightOptions=',
+  'CHATWOOT_BRAND_BLUE',
+  "'#1F93FF'",
   'OwnerincChatwootIcon',
 ]) {
   if (
@@ -201,8 +207,22 @@ for (const requiredLauncherContract of [
   }
 }
 
+for (const requiredIconContract of [
+  '<circle',
+  'fill="#1F93FF"',
+  'fill="white"',
+  'scale(0.6212)',
+]) {
+  if (!chatwootIcon.includes(requiredIconContract)) {
+    throw new Error(
+      `Contrato visual do favicon Chatwoot ausente: ${requiredIconContract}`,
+    );
+  }
+}
+
 if (
   !mobileNavigationBar.includes("name: 'chatwoot'") ||
+  !mobileNavigationBar.includes('OWNERINC_CHATWOOT_LABEL') ||
   !mobileNavigationBar.includes('openOwnerincChatwoot()') ||
   mobileNavigationBar.includes('newAiChat')
 ) {

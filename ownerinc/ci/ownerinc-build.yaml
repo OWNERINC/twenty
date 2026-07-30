@@ -19,7 +19,7 @@ concurrency:
 
 env:
   IMAGE_NAME: ghcr.io/ownerinc/twenty
-  OWNERINC_RELEASE: 2.25.1-ownerinc.2
+  OWNERINC_RELEASE: 2.25.1-ownerinc.3
 
 jobs:
   validate:

@@ -7,7 +7,10 @@ import { useIsSettingsPage } from '@/navigation/hooks/useIsSettingsPage';
 import { currentMobileNavigationDrawerState } from '@/navigation/states/currentMobileNavigationDrawerState';
 import { useFilteredObjectMetadataItems } from '@/object-metadata/hooks/useFilteredObjectMetadataItems';
 import { OwnerincChatwootIcon } from '@/ownerinc/components/OwnerincChatwootIcon';
-import { openOwnerincChatwoot } from '@/ownerinc/constants/ownerincChatwoot.constants';
+import {
+  openOwnerincChatwoot,
+  OWNERINC_CHATWOOT_LABEL,
+} from '@/ownerinc/constants/ownerincChatwoot.constants';
 import { useOpenRecordsSearchPageInSidePanel } from '@/side-panel/hooks/useOpenRecordsSearchPageInSidePanel';
 import { useSidePanelMenu } from '@/side-panel/hooks/useSidePanelMenu';
 import { isSidePanelOpenedState } from '@/side-panel/states/isSidePanelOpenedState';
@@ -102,7 +105,7 @@ export const MobileNavigationBar = () => {
     },
     {
       name: 'chatwoot',
-      label: 'Abrir Chatwoot',
+      label: OWNERINC_CHATWOOT_LABEL,
       Icon: OwnerincChatwootIcon,
       onClick: () => {
         setIsNavigationDrawerExpanded(false);
